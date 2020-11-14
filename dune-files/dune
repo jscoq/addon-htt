@@ -1,0 +1,9 @@
+(coq.theory
+ (name HTT)
+ (package coq-htt)
+ (flags -w -omega-is-deprecated
+        -w -ambiguous-paths
+        -w -notation-overridden))
+
+(dirs Core)  ; @todo Examples do not compile with fcsl-pcm@1.3.0
+(include_subdirs qualified)
