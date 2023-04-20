@@ -1,4 +1,4 @@
-REPO = https://github.com/TyGuS/htt.git
+REPO = https://github.com/imdea-software/htt.git
 TAG = master
 WORKDIR = workdir
 
@@ -11,7 +11,6 @@ get: $(WORKDIR)
 
 $(WORKDIR):
 	git clone --recursive --depth=1 -b $(TAG) $(REPO) $(WORKDIR)
-	cd $(WORKDIR) && git apply ../etc/patches/*.patch
 	cp -r dune-files/* $(WORKDIR)/
 
 install:
