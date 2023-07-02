@@ -4,7 +4,7 @@
  (deps
   (package coq-htt))
  (action
-  (run npx %{env:pkgtool=jscoq} build workdir --top HTT
+  (run npx %{env:pkgtool=jscoq} build workdir/theories --top htt
                    --load ../mathcomp/coq-pkgs/mathcomp-ssreflect.coq-pkg
                    --load ../fcsl-pcm/coq-pkgs/fcsl-pcm.coq-pkg
                    --package coq-pkgs/htt.coq-pkg)))
